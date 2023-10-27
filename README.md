@@ -1,5 +1,7 @@
 # Federated Learning via Meta-Variational Dropout (Official Code)
 
+This is a predisclosure version of github repo. The full code will be updated soon before the conference.
+
 This repository contains the official PyTorch code for the paper: [Federated Learning via Meta-Variational Dropout published in NeurIPS 2023](link-to-paper).
 
 - Python >= 3.7.4
