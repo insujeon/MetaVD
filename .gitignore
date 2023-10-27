@@ -1,0 +1,12 @@
+*.pdf
+*.png
+*.pyc
+
+data/
+data
+runs/
+slurm_outputs/
+studys/
+practice/
+
+_ignore*
