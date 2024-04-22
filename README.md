@@ -33,14 +33,14 @@ This repository contains the official PyTorch code for the paper: [Federated Lea
   python main.py --model nvdpgaus --dataset cifar10
   ```
 
-**EX) Run Cifar100 Experiment with MetaVD and heterogenity level of $\alpha = 5.0$**
+**EX) Run Cifar100 Experiment with MetaVD and Heterogeneity level of $\alpha = 5.0$**
 
   ```bash
   python main.py --model nvdpgaus --dataset cifar100 --alpha 5.0
   ```
 
 ## :gear: Options
-We currently support various models and datasets options.
+We currently support following models and datasets options.
 
 ### Supported Models
 | Model Name | Flag | Description |
@@ -78,22 +78,14 @@ We currently support various models and datasets options.
 
 > Please see the arg parser in main.py file to enable other options.
 
-### Other details
+### Other details of parameters
 
 For all datasets, we set the number of rounds (`num_rounds`) to 1000 to ensure sufficient convergence following conventions. The batch size (`local_bs`) was set to 64, and local steps (`local_epochs`) was set to 5. Personalization was executed with a batch size (`adaptation_bs`) of 64 and a 1-step update. 
 
 For all methods, we investigated the server learning rate and local SGD learning rate within identical
-ranges. The server learning rate η was explored within the range of [0.6, 0.7, 0.8, 0.9, 1.0]. The local
-SGD learning rate was investigated within the range of [0.005, 0.01, 0.015, 0.02, 0.025, 0.03]. In MAML
-and PerFedAvg, an additional client learning rate γ is required, for which we searched within the range of
-[0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1]. For MetaVD, an additional KL divergence parameter
-β is needed, and we sought its optimal value within the range of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].
-We follow the hyperparameter setting outlined in pFedGP, except for adjusting the batch size to 64 or 320 and
-investigating the learning rate within the range of [0.03 to 0.1]. To ensure the reproducibility of the experiments,
-we will release all code, including baselines, on our GitHub repository.
-
-
-
+ranges. The server learning rate η (`server_lr`) was explored within the range of [0.6, 0.7, 0.8, 0.9, 1.0]. The local
+SGD learning rate (`inner_lr`) was investigated within the range of [0.005, 0.01, 0.015, 0.02, 0.025, 0.03].For MetaVD, an additional KL divergence weight parameter
+β (`beta`) is needed, and we set its optimal value to 10.
 
 ### Visualization
 
