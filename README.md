@@ -120,3 +120,9 @@ If you find this work useful, please cite our paper:
 - [FL-bench](https://github.com/KarhouTam/FL-bench)
 - [Leaf](https://github.com/TalwalkarLab/leaf)
 - [NVDP](https://github.com/insujeon/NVDPs)
+
+
+## Acknowledgement
+Thank you, my colleagues, for your valuable contributions.
+- https://github.com/alsdml
+- https://github.com/junhyeog
